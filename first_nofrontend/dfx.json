@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "dfx": "0.7.1",
+  "canisters": {
+    "first_nofrontend": {
+      "type": "motoko",
+      "main": "src/first_nofrontend/main.mo"
+    },
+    "first_nofrontend_assets": {
+      "type": "assets",
+      "source": [
+        "src/first_nofrontend_assets/assets"
+      ],
+      "dependencies": [
+        "first_nofrontend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
